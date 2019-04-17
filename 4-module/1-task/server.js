@@ -9,7 +9,7 @@ server.on('request', (req, res) => {
   const pathname = url.parse(req.url).pathname.slice(1);
   const filepath = path.join(__dirname, 'files', pathname);
 
-  if(pathname.indexOf('/') !== -1) {
+  if (pathname.indexOf('/') !== -1) {
     res.statusCode = 400;
     res.end();
     return;
@@ -35,7 +35,6 @@ function readFile(filepath, res) {
 
     res.end(data);
   });
-
 }
 
 module.exports = server;

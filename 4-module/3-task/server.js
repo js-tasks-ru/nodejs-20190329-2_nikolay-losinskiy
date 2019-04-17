@@ -28,7 +28,6 @@ server.on('request', (req, res) => {
     }
 
     fs.unlink(filepath, (error) => {
-
       if (error) {
         if (error.code === 'ENOENT') {
           res.statusCode = 404;
@@ -41,7 +40,7 @@ server.on('request', (req, res) => {
 
       res.statusCode = 200;
       res.end();
-    })
+    });
   }
 });
 
