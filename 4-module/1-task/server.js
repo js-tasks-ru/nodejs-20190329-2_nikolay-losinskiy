@@ -25,6 +25,7 @@ server.on('request', (req, res) => {
   }
 });
 
+
 function readFile(filepath, res) {
   fs.readFile(filepath, (err, data) => {
     if (err) {
