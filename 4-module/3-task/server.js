@@ -35,11 +35,10 @@ server.on('request', (req, res) => {
           res.statusCode = 500;
         }
         res.end();
+      } else {
+        res.statusCode = 200;
+        res.end();
       }
-
-
-      res.statusCode = 200;
-      res.end();
     });
   }
 });
