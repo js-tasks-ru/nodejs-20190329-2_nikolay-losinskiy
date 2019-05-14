@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Node.JS Course Materials",
   "scripts": {
-    "test": "NODE_ENV=test mocha --reporter=reporter.js *module/*task/**/*.test.js",
-    "test:local": "NODE_ENV=test node local.js",
+    "test": "cross-env NODE_ENV=test mocha --reporter=reporter.js *module/*task/**/*.test.js",
+    "test:local": "cross-env NODE_ENV=test node local.js",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -19,7 +19,7 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "config": "^3.1.0",
+    "cross-env": "^5.2.0",
     "fs-extra": "^7.0.1",
     "juice": "^5.2.0",
     "koa": "^2.7.0",
@@ -44,6 +44,8 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "sinon": "^7.3.2",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
     "uuid": "^3.3.2"
   }
 }
