@@ -19,6 +19,5 @@ module.exports = new LocalStrategy(
 
         return done(null, user);
       });
-    // done(null, false, 'Стратегия подключена, но еще не настроена');
     }
 );
