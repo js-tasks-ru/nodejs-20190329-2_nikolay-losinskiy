@@ -65,7 +65,7 @@ router.post('/register', handleMongooseValidationError, require('./controllers/r
 router.post('/confirm', require('./controllers/confirm'));
 
 router.get('/me', mustBeAuthenticated, require('./controllers/me'));
-router.get('/messages', require('./controllers/messages'));
+router.get('/messages', mustBeAuthenticated, require('./controllers/messages'));
 
 app.use(router.routes());
 
